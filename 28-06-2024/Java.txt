@@ -1,0 +1,100 @@
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+	int num;
+	Scanner input = new Scanner (System.in);
+	  num = input.nextInt ();
+	if (num != 0)
+	  {
+		if (num < 0)
+		  System.out.print ("Negative");
+		else
+		  System.out.print ("Positive");
+	  }
+	else
+	    System.out.print ("Zero");
+
+  }
+}
+
+
+
+```````````````````````````````````````````````````````````````````````````
+
+
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+  int num;
+  Scanner input  = new Scanner(System.in);
+  num = input.nextInt();
+  if(num % 3 == 0 && num % 5 != 0)
+  {
+    System.out.println("Hi");
+  }
+  else if(num % 5 == 0 && num % 3 != 0)
+  {
+      System.out.println("Hello");
+  }
+  else if(num % 3 == 0 && num % 5 == 0)
+  {
+      System.out.println("HiHello");
+  }
+  }
+}
+
+
+
+`````````````````````````````````````````````````````````````````````````````
+
+
+import java.util.*;
+public class Main
+{
+    public static void main (String[] args) 
+    {
+        int dd, mm, yy;
+        Scanner input = new Scanner(System.in);
+        dd = input.nextInt();
+        mm = input.nextInt();
+        yy = input.nextInt();
+        
+        if(yy >= 1900 && yy<= 9999)
+        {
+            if(mm >= 1 && mm <= 12)
+            {
+                if((dd >= 1 && dd <= 31 ) && (mm == 1 || mm == 3 || mm == 5 || mm == 7 || mm == 8 || mm == 10 || mm == 12 ) )
+                {
+                    System.out.print("Valid");
+                }
+                else if ((dd >= 1 && dd <= 30) && (mm == 4 || mm == 6 || mm == 9 || mm == 11))
+                {
+                    System.out.println("Valid");
+                }
+                else if ((dd >= 1 && dd <= 28) && (mm == 2))
+                {
+                    System.out.println("Valid");
+                }
+                else if ((dd >= 1 && dd <= 29) && (mm == 2) && (yy % 4 == 0 && yy % 100 != 0 || yy % 400 == 0))
+                {
+                    System.out.println("Valid");
+                }
+                else
+                {
+                    System.out.println("Invalid");
+                }
+            }
+            else
+              System.out.println("Invalid");
+        }
+        else
+          System.out.println("Invalid");
+    }
+}
+
+
+`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
