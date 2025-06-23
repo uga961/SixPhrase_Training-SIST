@@ -1,0 +1,76 @@
+                     format specifier
+int                    %d                         4 bytes
+long int               %ld                        8 bytes
+long long int          %lld                       16 bytes
+
+
+float                  %f                         4 bytes
+double 		       %lf                        8 bytes
+long double            %llf                       16 bytes
+
+
+i/p : 1.23
+o/p : 1.230000  --> after point 6 digits
+
+
+
+characters   -----> a, 8, ?, ., +
+string       -----> ad, 11, h8  
+
+
+char                   %c                         1 byte
+
+
+{45, 100, -45, 20} --> everything is int here, but to call specific one we need to give name/address to the value.
+
+functions :-
+
+predefined function
+	main()
+	printf()
+	scanf()
+
+user defined function
+	created by users.
+
+
+int num = 45   // the value 45 is a integer and stored in the variable num.
+  - variable name should start with character, not with special characters or numbers
+  - at the end we can use numbers
+
+ right       wrong
+num1         ^num
+num_1        1num
+
+
+
+program 1 :- (i/p and the o/p should be same)
+
+#include <stdio.h>
+int main()
+{
+    long long int num; // we can use only 4 digit numbers
+    printf("enter the number: \n");
+    scanf("%lld", &num);
+    printf("%lld", num);
+    return 0;
+}      
+
+program 2 :- (for printing lines)
+
+#include <stdio.h>
+int main()
+{
+    printf("welcome to placement class")
+    return 0;
+}  
+
+program 3 :-
+
+#include <stdio.h>
+int main()
+{
+    char ch = 'a'; // character should be placed in single quotes ('a')
+    printf("%c", ch);
+    return 0;
+}

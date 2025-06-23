@@ -1,0 +1,108 @@
+--> shifting operator and unitary operator are important for interviews.
+
+Arithmetic ---> +, -, /, *, %
+
+  5+2*2/2
+  
+  lower precedence ---> +, -
+  higher precedence ---> *, /, %
+
+logical operator 
+
+  && ---> logical and
+  || ---> logical or
+
+
+  10 && 5 --> TRUE (because both 10 and 5 are number)
+  10 && 0 --> FALSE (because 0 is false)
+  10 || 5 --> TRUE
+  10 || 0 --> TRUE
+
+  10>5 && 10>25 --> FALSE
+
+comparison or relational operator
+
+  >, <, >=
+
+pre increment ---> ++a
+post increment ---> a++
+pre decrement ---> --a
+post decrement ---> a---
+
+
+  a = 10
+  b = a++ (b=a == b=10, now a = 11 that is now a increased to 11)
+  c = ++a (++a = 12, c = 12)
+
+
+program :-
+
+#include <stdio.h>
+int main()
+{
+    int a = 25;
+    pirntf("%d", a++);  ---> 25    a = 26 (print and the increment)
+    pirntf("%d", --a);  ---> 25    a = 25 (first decrement and then print)
+    pirntf("%d", ++a);  ---> 26    a = 26
+    pirntf("%d", a--);  ---> 26    a = 25
+    pirntf("%d", a--);  ---> 25    a = 24
+    pirntf("%d", a);    ---> 24
+    return 0;
+}
+
+
+
+int c = --2;  ---> now it operates multiplication (-*-2 = 2)
+printf("%d",c) ---> o/p: 2
+
+int c = 2;
+printf("%d",--c) ---> o/p: 1
+
+
+
+
+shifting operators
+
+  >>  --> right shift (move all bits from left to right)
+  <<  --> left shift (vice versa)
+
+     10 >> 1 = 5 (decimal to binary and then shifting)
+     10 << 1 = 20
+
+		64  32  16  8  4  2  1
+			    1  0  1  0     --> 10
+			       1  0  1     --> 5 (4+0+1 = 5) "10 >> 1"
+			          1  0     --> 2 (2+0 = 2)  "10 >> 2"
+			1   0  1  0  0     --> 20 (16+0+4+0 = 29)  "10<<1"
+
+
+  	--> 1024>>5 = 32
+  	--> 1024<<5 = 32768
+
+>> --> dec   -, /, %  <--> but these are sudden decrement so we can't use lower precedence.
+<< --> inc   +, *  <--> but these are sudden increment so we can't use lower precedence.
+
+  	     // SHORT TRICK //
+	10>>1 --> 10/2^1 = 10/2 = 5
+	10>>2 --> 10/2^2 = 10/4 = 2 
+	10<<1 --> 10*2^1 = 10*2 = 20
+	10<<2 --> 10*2^2 = 10*4 = 40
+
+width precision
+
+
+  int num = 25;
+  printf("%05d", num);
+
+  o/p:  0 0 0 2 5
+
+  int num = 25;
+  printf("%-5d", num);
+
+  o/p:  2 5     --> in -ve we cant add zeros.
+
+  int num, width;
+  scanf("%d %d", &num &width); // 25  5
+  printf("%0*d", width, num);   // * will replace the width.
+  
+  o/p: 0 0 0 2 5
